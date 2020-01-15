@@ -3,7 +3,8 @@ backend:
   branch: master # Branch to update (master by default)
 
 locale: 'ja'
-media_folder: "docs/.vuepress/public/media" # Folder where user uploaded files should go
+media_folder: ".vuepress/public/media" # Folder where user uploaded files should go
+public_folder : "/media"
 
 # This line should *not* be indented
 publish_mode: editorial_workflow
