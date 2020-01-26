@@ -23,6 +23,12 @@ module.exports = {
   dest: 'pages',
   head: [
     ["link", { rel: "icon", type: "image/png", href: "/img/favicon.png" }],
+    ['meta', { name: 'og:url', content: 'https://techpress.netlify.com/' }],
+    ['meta', { name: 'og:type', content: 'website' }],
+    ['meta', { name: 'og:title', content: 'TechPress' }],
+    ['meta', { name: 'og:site_name', content: 'TechPress' }],
+    ['meta', { name: 'og:description', content: '技術的なマインドを共有するサイトです。\nテクニックよりも意識を持つことを第一目的としています。' }],
+    ['meta', { name: 'og:image', content: '/img/favicon.png' }],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/netlify-identity-widget@1.5.2/build/netlify-identity-widget.min.js'}]
   ],
   locales: {
@@ -33,16 +39,18 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Admin', link: '/admin' }
+      { text: 'Admin', link: '/admin/' }
     ],
 
     smoothScroll: true,
     sidebar: 'auto',
     sidebar: sidebarArray,
 
-    displayAllHeaders: true, // デフォルト値：false
+    displayAllHeaders: false, // デフォルト値：false
     activeHeaderLinks: true, // フォルト値：true
     lastUpdated: 'Last Updated', // string | boolean
+    nextLinks: true,
+    prevLinks: true,
 
     serviceWorker: {
       updatePopup: true // Boolean | Object, フォルト値 undefined.
@@ -52,18 +60,5 @@ module.exports = {
       //    buttonText: "Refresh"
       // }
     },
-
-    // GitHubを想定しています。GitLabの完全なURLにすることもできます
-    repo: '',
-    // カスタムウェアハウスリンクテキスト。 「themeConfig.repo」から次のように自動的に推測されます
-    // 「GitHub」/「GitLab」/「Bitbucket」、または「ソース」のいずれか。
-    repoLabel: 'Github',
-
-    // 以下オプション
-    // docsRepo: 'DemoMacro/VueCMS',
-    // docsDir: 'docs',
-    docsBranch: 'master',
-    editLinks: true,
-    //editLinkText: ''
   }
 }
