@@ -32,6 +32,7 @@ module.exports = {
   dest: "pages",
   head: [
     ["link", { rel: "icon", type: "image/png", href: "/img/favicon.png" }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
     ["meta", { name: "og:url", content: "https://techpress.netlify.com/" }],
     ["meta", { name: "og:type", content: "website" }],
     ["meta", { name: "og:title", content: "TechPress" }],
