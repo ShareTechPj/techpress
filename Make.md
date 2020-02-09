@@ -6,6 +6,7 @@ TechePress構築
 # Gitクローン
 git clone https://github.com/ShareTechPj/techpress.git techpress
 yarn install
+yarn upgrade vuepress@^1.2.0
 ```
 
 ## 以下は初期構築

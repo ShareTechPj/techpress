@@ -6,21 +6,18 @@ var dirpath = "./docs";
 var dirs = fs.readdirSync(dirpath).filter(f => {
   return (
     fs.existsSync(dirpath + "/" + f) &&
-    fs.statSync(dirpath + "/" + f).isDirectory()
+    fs.statSync(dirpath + "/" + f).isDirectory() &&
+    ".vuepress" != f
   );
 });
 
-var sidebarArray = ["/"].concat(
+var sidebarArray = [{path:"/", title:"TechPress"}].concat(
   dirs.map(dir => {
     return {
       title: dir,
       collapsable: true,
-        children: fs.readdirSync(dirpath + "/" + dir).map(childDir => {
-        if (childDir=="README.md") {
-          return dirpath + "/" + dir + "/";
-        } else {
-          return dirpath + "/" + dir + "/" + childDir;
-        }
+      children: fs.readdirSync(dirpath + "/" + dir).map(childDir => {
+        return "/" + dir + "/" + childDir;
       })
     };
   })
@@ -32,7 +29,7 @@ module.exports = {
   dest: "pages",
   head: [
     ["link", { rel: "icon", type: "image/png", href: "/img/favicon.png" }],
-    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ["link", { rel: "manifest", href: "/manifest.json" }],
     ["meta", { name: "og:url", content: "https://techpress.netlify.com/" }],
     ["meta", { name: "og:type", content: "website" }],
     ["meta", { name: "og:title", content: "TechPress" }],
@@ -62,7 +59,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: "Home", link: "/" },
-      { text: "Admin", link: "/admin/" }
+      { text: "Admin", link: "https://techpress.netlify.com/admin/" }
     ],
 
     smoothScroll: true,
@@ -71,17 +68,6 @@ module.exports = {
 
     displayAllHeaders: false, // デフォルト値：false
     activeHeaderLinks: true, // フォルト値：true
-    lastUpdated: "Last Updated", // string | boolean
-    nextLinks: true,
-    prevLinks: true,
-
-    serviceWorker: {
-      updatePopup: true // Boolean | Object, フォルト値 undefined.
-      // trueに設定されている場合、デフォルトのテキスト設定は:
-      // updatePopup: {
-      //    message: "New content is available.",
-      //    buttonText: "Refresh"
-      // }
-    }
+    lastUpdated: "Last Updated" // string | boolean
   }
 };
