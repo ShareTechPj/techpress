@@ -49,7 +49,14 @@ module.exports = {
         src:
           "https://cdn.jsdelivr.net/npm/netlify-identity-widget@1.5.2/build/netlify-identity-widget.min.js"
       }
-    ]
+    ],
+    ['meta', { name: 'theme-color', content: '#3aabd2' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'apple-touch-icon', href: '/img/apple-touch-icon-152x152.png' }],
+    ['link', { rel: 'mask-icon', href: '/img/safari-pinned-tab.svg', color: '#3aabd2' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/img/msapplication-icon-144x144.png' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
   ],
   locales: {
     "/": {
@@ -69,5 +76,17 @@ module.exports = {
     displayAllHeaders: false, // デフォルト値：false
     activeHeaderLinks: true, // フォルト値：true
     lastUpdated: "Last Updated" // string | boolean
-  }
+  },
+  plugins: [
+    [
+      '@vuepress/pwa',
+      {
+        serviceWorker: true,
+        updatePopup: {
+          message: "コンテンツ登録されました",
+          buttonText: "更新"
+        }
+      }
+    ]
+  ]
 };
