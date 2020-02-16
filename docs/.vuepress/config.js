@@ -28,7 +28,6 @@ module.exports = {
   description: "技術共有",
   dest: "pages",
   head: [
-    ["link", { rel: "icon", type: "image/png", href: "/img/favicon.png" }],
     ["link", { rel: "manifest", href: "/manifest.json" }],
     ["meta", { name: "og:url", content: "https://techpress.netlify.com/" }],
     ["meta", { name: "og:type", content: "website" }],
@@ -42,21 +41,32 @@ module.exports = {
           "技術的なマインドを共有するサイトです。\nテクニックよりも意識を持つことを第一目的としています。"
       }
     ],
-    ["meta", { name: "og:image", content: "/img/favicon.png" }],
+    ["script",{src: "https://identity.netlify.com/v1/netlify-identity-widget.js"}],
+    ["meta", { name: "og:image", content: "/img/icons/favicon-16x16.png" }],
+    ['meta', { name: 'theme-color', content: '#6898de' }],
+    ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
     [
-      "script",
+      "meta",
+      { name: "apple-mobile-web-app-status-bar-style", content: "black" }
+    ],
+    ["link", { rel: "icon", type: "image/png", sizes:"32x32", href: "/img/icons/favicon-32x32.png" }],
+    ["link", { rel: "icon", type: "image/png", sizes:"16x16", href: "/img/icons/favicon-16x16.png" }],
+    [
+      "link",
+      { rel: "apple-touch-icon", sizes:"180x180", href: "/img/icons/apple-touch-icon.png" }
+    ],
+    [
+      "link",
+      { rel: "mask-icon", href: "/img/icons/safari-pinned-tab.svg", color: "#5bbad5" }
+    ],
+    [
+      "meta",
       {
-        src:
-          "https://cdn.jsdelivr.net/npm/netlify-identity-widget@1.5.2/build/netlify-identity-widget.min.js"
+        name: "msapplication-TileImage",
+        content: "/img/icons/msapplication-icon-144x144.png"
       }
     ],
-    ['meta', { name: 'theme-color', content: '#3aabd2' }],
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['link', { rel: 'apple-touch-icon', href: '/img/apple-touch-icon-152x152.png' }],
-    ['link', { rel: 'mask-icon', href: '/img/safari-pinned-tab.svg', color: '#3aabd2' }],
-    ['meta', { name: 'msapplication-TileImage', content: '/img/msapplication-icon-144x144.png' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+    ["meta", { name: "msapplication-TileColor", content: "#6898de" }]
   ],
   locales: {
     "/": {
