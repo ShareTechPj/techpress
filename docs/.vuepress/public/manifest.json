@@ -6,10 +6,10 @@
     "display": "standalone",
     "start_url": "https://techpress.netlify.com/",
     "short_name": "Tech",
-    "theme_color": "#6898de",
+    "theme_color": "#f0f5fc",
     "description": "一部の人向け技術情報の共有サイト",
     "orientation": "any",
-    "background_color": "#6898de",
+    "background_color": "#f0f5fc",
     "related_applications": [],
     "prefer_related_applications": false,
     "icons": [

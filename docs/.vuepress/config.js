@@ -43,7 +43,7 @@ module.exports = {
     ],
     ["script",{src: "https://identity.netlify.com/v1/netlify-identity-widget.js"}],
     ["meta", { name: "og:image", content: "/img/icons/favicon-16x16.png" }],
-    ['meta', { name: 'theme-color', content: '#6898de' }],
+    ['meta', { name: 'theme-color', content: '#f0f5fc' }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
     [
       "meta",
@@ -66,7 +66,7 @@ module.exports = {
         content: "/img/icons/msapplication-icon-144x144.png"
       }
     ],
-    ["meta", { name: "msapplication-TileColor", content: "#6898de" }]
+    ["meta", { name: "msapplication-TileColor", content: "#f0f5fc" }]
   ],
   locales: {
     "/": {
