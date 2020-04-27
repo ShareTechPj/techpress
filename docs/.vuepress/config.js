@@ -29,7 +29,7 @@ module.exports = {
   dest: "pages",
   head: [
     ["link", { rel: "manifest", href: "/manifest.json" }],
-    ["meta", { name: "og:url", content: "https://techpress.netlify.com/" }],
+    ["meta", { name: "og:url", content: "https://techpress.netlify.app/" }],
     ["meta", { name: "og:type", content: "website" }],
     ["meta", { name: "og:title", content: "TechPress" }],
     ["meta", { name: "og:site_name", content: "TechPress" }],
@@ -41,7 +41,7 @@ module.exports = {
           "技術的なマインドを共有するサイトです。\nテクニックよりも意識を持つことを第一目的としています。"
       }
     ],
-    ["script",{src: "https://identity.netlify.com/v1/netlify-identity-widget.js"}],
+    ["script",{src: "https://identity.netlify.app/v1/netlify-identity-widget.js"}],
     ["meta", { name: "og:image", content: "/img/icons/favicon-16x16.png" }],
     ['meta', { name: 'theme-color', content: '#f0f5fc' }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
@@ -76,7 +76,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: "Home", link: "/" },
-      { text: "Admin", link: "https://techpress.netlify.com/admin/" }
+      { text: "Admin", link: "https://techpress.netlify.app/admin/" }
     ],
 
     smoothScroll: true,
